@@ -1,5 +1,6 @@
 require 'simplecov'
 SimpleCov.start
+SimpleCov.add_filter ['spec', 'config', 'mailers', 'channels', 'jobs']
 # Previous content of test helper now starts here
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
