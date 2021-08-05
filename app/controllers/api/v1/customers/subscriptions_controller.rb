@@ -15,6 +15,10 @@ class Api::V1::Customers::SubscriptionsController < ApplicationController
     render json: SubscriptionSerializer.new(sub), status: 200
   end
 
+  def index
+    render json: SubscriptionSerializer.new(@customer.subscriptions)
+  end
+
   private
 
   def subscription_params

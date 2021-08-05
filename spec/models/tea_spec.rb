@@ -9,6 +9,6 @@ describe Tea, type: :model do
   end
 
   describe 'relationships' do
-    it {should have_many :subscription}
+    it {should have_many :subscriptions}
   end
 end
