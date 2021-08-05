@@ -1,9 +1,8 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/mikefoy/turing/4module/takehome_challenges/tea-api/app/models/subscription.rb": {
+      "/Users/mikefoy/turing/4module/takehome_challenges/tea-api/app/models/customer.rb": {
         "lines": [
-          1,
           1,
           1,
           null,
@@ -21,8 +20,9 @@
           null
         ]
       },
-      "/Users/mikefoy/turing/4module/takehome_challenges/tea-api/app/models/customer.rb": {
+      "/Users/mikefoy/turing/4module/takehome_challenges/tea-api/app/models/subscription.rb": {
         "lines": [
+          1,
           1,
           1,
           null,
@@ -46,6 +46,6 @@
         ]
       }
     },
-    "timestamp": 1628121581
+    "timestamp": 1628121694
   }
 }
