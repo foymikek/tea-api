@@ -1,11 +1,16 @@
 class Api::V1::Customers::SubscriptionsController < ApplicationController
   before_action :set_customer
-  before_action :set_tea
+  before_action :set_tea, only: ["create"]
 
   def create
     sub = @customer.subscriptions.new(subscription_params)
-
-    render json: SubscriptionSerializer.new(sub), status: 201
+    if @customer.teas.find_by(id: params[:tea_id])
+      render json: { errors: "You're already subscribed to this tea" }, status: :bad_request
+    elsif sub.save
+      render json: SubscriptionSerializer.new(sub), status: 201
+    else
+      render json: { errors: sub.errors.full_messages.to_sentence }, status: :bad_request
+    end
   end
 
   def update
@@ -31,5 +36,8 @@ class Api::V1::Customers::SubscriptionsController < ApplicationController
 
   def set_tea
     @tea = Tea.find_by(id: params[:tea_id])
+    if @tea.nil?
+      render json: { errors: "Cannot find tea" }, status: :not_found
+    end
   end
 end

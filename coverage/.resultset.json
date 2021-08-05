@@ -21,7 +21,7 @@
           null
         ]
       },
-      "/Users/mikefoy/turing/4module/takehome_challenges/tea-api/app/models/tea.rb": {
+      "/Users/mikefoy/turing/4module/takehome_challenges/tea-api/app/models/subscription.rb": {
         "lines": [
           1,
           1,
@@ -34,7 +34,7 @@
           null
         ]
       },
-      "/Users/mikefoy/turing/4module/takehome_challenges/tea-api/app/models/subscription.rb": {
+      "/Users/mikefoy/turing/4module/takehome_challenges/tea-api/app/models/tea.rb": {
         "lines": [
           1,
           1,
@@ -54,26 +54,21 @@
           1,
           null,
           1,
-          0,
-          null,
-          0,
-          null,
+          3,
+          3,
+          1,
+          2,
+          1,
           null,
           1,
-          0,
-          0,
           null,
-          0,
           null,
           null,
           1,
           1,
-          null,
-          null,
           1,
           null,
           1,
-          0,
           null,
           null,
           1,
@@ -81,7 +76,20 @@
           null,
           null,
           1,
+          null,
           1,
+          3,
+          null,
+          null,
+          1,
+          6,
+          null,
+          null,
+          1,
+          4,
+          4,
+          1,
+          null,
           null,
           null
         ]
@@ -102,6 +110,6 @@
         ]
       }
     },
-    "timestamp": 1628170832
+    "timestamp": 1628206887
   }
 }
