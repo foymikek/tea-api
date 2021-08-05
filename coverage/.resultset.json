@@ -34,7 +34,7 @@
           null
         ]
       },
-      "/Users/mikefoy/turing/4module/takehome_challenges/tea-api/app/controllers/api/v1/customers/subscriptions_controller.rb": {
+      "/Users/mikefoy/turing/4module/takehome_challenges/tea-api/app/models/subscription.rb": {
         "lines": [
           1,
           1,
@@ -42,14 +42,33 @@
           null,
           1,
           1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/mikefoy/turing/4module/takehome_challenges/tea-api/app/controllers/api/v1/customers/subscriptions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          1,
+          1,
           1,
           null,
           null,
           1,
           null,
           1,
-          1,
+          0,
           null,
           null,
           1,
@@ -68,19 +87,6 @@
           null
         ]
       },
-      "/Users/mikefoy/turing/4module/takehome_challenges/tea-api/app/models/subscription.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
       "/Users/mikefoy/turing/4module/takehome_challenges/tea-api/app/serializers/subscription_serializer.rb": {
         "lines": [
           1,
@@ -91,6 +97,6 @@
         ]
       }
     },
-    "timestamp": 1628169526
+    "timestamp": 1628170392
   }
 }
