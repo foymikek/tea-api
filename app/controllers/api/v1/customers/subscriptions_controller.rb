@@ -21,7 +21,11 @@ class Api::V1::Customers::SubscriptionsController < ApplicationController
   end
 
   def index
-    render json: SubscriptionSerializer.new(@customer.subscriptions)
+    if @customer.subscriptions.count == 0
+      render json: { message: "No subscriptions found" }, status: 200
+    else
+      render json: SubscriptionSerializer.new(@customer.subscriptions)
+    end
   end
 
   private
@@ -32,6 +36,9 @@ class Api::V1::Customers::SubscriptionsController < ApplicationController
 
   def set_customer
     @customer = Customer.find_by(id: params[:customer_id])
+    if @customer.nil?
+      render json: { errors: "Cannot find customer" }, status: :not_found
+    end
   end
 
   def set_tea
