@@ -8,7 +8,7 @@ A RESTful Rails API for a Tea Subscription Service.
 [**Setup**](#setup) |
 [**Endpoints**](#endpoints) |
 [**Testing**](#testing) |
-[**Making a Contribution**] (#making-a-contribution) |
+[**Making a Contribution**](#making-a-contribution) |
 [**Developer**](#developer)
 
 <!-- DEVELOPERS -->
