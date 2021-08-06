@@ -43,4 +43,41 @@ RSpec.describe 'See Customer Subscriptions' do
       expect(subs[:data].first[:attributes]).to have_key(:frequency)
     end
   end
+
+  describe 'sad paths/edge cases' do
+    it 'shows error if customer does not exist' do
+      customer = Customer.create(
+          first_name: Faker::Name.first_name,
+          last_name:  Faker::Name.last_name,
+          email:      Faker::Internet.email,
+          address:    Faker::Address.full_address
+        )
+
+      customer.id = 1
+
+      get "/api/v1/customers/2/subscriptions"
+      subs = JSON.parse(response.body, symbolize_names: true)
+      expect(response).to_not be_successful
+      expect(response.status).to eq(404)
+
+      expect(subs[:errors]).to eq("Cannot find customer")
+    end
+
+    it 'shows message if customer has no subscriptions' do
+      customer = Customer.create(
+          first_name: Faker::Name.first_name,
+          last_name:  Faker::Name.last_name,
+          email:      Faker::Internet.email,
+          address:    Faker::Address.full_address
+        )
+
+      get "/api/v1/customers/#{customer.id}/subscriptions"
+      subs = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to be_successful
+      expect(response.status).to eq(200)
+
+      expect(subs[:message]).to eq("No subscriptions found")
+    end
+  end
 end
