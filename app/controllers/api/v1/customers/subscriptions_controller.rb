@@ -21,7 +21,7 @@ class Api::V1::Customers::SubscriptionsController < ApplicationController
   end
 
   def index
-    if @customer.subscriptions.count == 0
+    if @customer.subscriptions == []
       render json: { message: "No subscriptions found" }, status: 200
     else
       render json: SubscriptionSerializer.new(@customer.subscriptions)
